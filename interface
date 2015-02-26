@@ -1,0 +1,64 @@
+// this sets the background color of the master UIView (when there are no windows/tab groups on it)
+Titanium.UI.setBackgroundColor('#000');
+
+// create base UI tab and root window
+var win1 = Titanium.UI.createWindow({  
+    title:'Tab 1',
+    backgroundColor:'#66FFCC'
+});
+
+var firstSection = Ti.UI.createTableViewSection({headerTitle: 'Welcome!'});
+
+// create a button
+var button1 = Ti.UI.createButton({
+	title : 'button1',
+	height : 25,
+	width : 25,
+	top : 25,
+	left : 25
+}); 
+// Button 1
+button1.addEventListener('click', function(e) {alert('You clicked me!')})
+var nav = Titanium.UI.Android.createNavigationGroup({
+	window: win2
+});
+win2.add(button);
+win1.add(nav);
+win1.open();
+
+
+// create orientation button
+var switchOrientation = Ti.UI.createButton{(
+	title: 'Make Landscape'});
+	switchOrientation.addEventListener('click', rotateLayout);
+	var layout = Ti.UI.createView({layout: 'vertical'});
+	layout.add(switchOrientation);
+	function rotateLayout() {
+		win1.orientationModes = [Ti.UI.LANDSCAPE_LEFT];
+		switchOrientation.hide();
+	})
+
+
+
+// create controls tab and root window//
+var win2 = Titanium.UI.createWindow({  
+    title:'Tab 2',
+    backgroundColor:'#CC6644'
+});
+
+var button2 = Ti.UI.createButton({
+	title : 'button2',
+	height : 25,
+	width : 25,
+	top : 25,
+	left : 25
+});
+
+// button 2
+button2.addEventListener('click', function(e) {alert('You clicked me!')})
+var nav = Titanium.UI.Android.createNavigationGroup({
+	window: win2
+});
+win1.add(button);
+win2.add(nav);
+win2.open();
