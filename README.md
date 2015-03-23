@@ -1,2 +1,3 @@
 projects
 ========
+Reviewer 1: The app.js code text won't run on my emulator, but that could be completely becuase of my computer and my emulator. It really only works and funs fully functional code about 40% of the time. Code doesn't seem to follow the tea exercise in the book correctly. There is a different number of tea colors and the tea messages are different than in the book. The code here does display a few different color bands and a unique label when one of the bands is selected, however. A button does seem available to navigate from one window to the other. The gadget used is the camera gadget. Code is similiar to the code in the book, but updated to include the semi colons that the book is missing. Code seems correct. 
